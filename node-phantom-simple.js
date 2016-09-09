@@ -140,11 +140,13 @@ exports.create = function (options, callback) {
     // if platform is win32 and the path contains space, using some hacks for the spawn method
   	if (process.platform == 'win32' && options.path.indexOf(' ') >= 0) {
   		var args = [
-  			"/S",
-  			"/C",
+  			'/S',
+  			'/C',
   			'"',
   			options.path,
-  		].concat('bridge.js').concat('"');
+  			'bridge.js',
+  			'"'
+  		];
   
   		var command = process.env.comspec || "cmd.exe";
   
