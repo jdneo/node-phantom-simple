@@ -1,1 +1,1 @@
-This package is forked from [node-phantom-simple](https://www.npmjs.com/package/node-phantom-simple), and is aim to solve a windows issue. Plz use the [original package](https://github.com/baudehlo/node-phantom-simple) if you wan to use it.
+This package is forked from [node-phantom-simple](https://www.npmjs.com/package/node-phantom-simple), and is aim to solve a windows issue. Plz use the [original package](https://github.com/baudehlo/node-phantom-simple) if you want to use it.
