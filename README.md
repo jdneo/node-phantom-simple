@@ -7,6 +7,9 @@ node-phantom-simple
 > A bridge between [PhantomJS](http://phantomjs.org/) / [SlimerJS](https://slimerjs.org/)
 and [Node.js](http://nodejs.org/).
 
+This package is forked from [node-phantom-simple](https://www.npmjs.com/package/node-phantom-simple), and is aim to solve a windows issue. Plz use the [original package](https://github.com/baudehlo/node-phantom-simple) if you wan to use it.
+
+
 This module is API-compatible with
 [node-phantom](https://www.npmjs.com/package/node-phantom) but doesn't rely on
 `WebSockets` / `socket.io`. In essence the communication between Node and
