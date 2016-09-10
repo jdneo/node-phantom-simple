@@ -158,7 +158,6 @@ exports.create = function (options, callback) {
   			command,
   			args,
   			{
-				stdio: "inherit",
   				windowsVerbatimArguments: true,
   				cwd: __dirname
   			}
