@@ -139,12 +139,16 @@ exports.create = function (options, callback) {
     var phantom;
     // if platform is win32 and the path contains space, using some hacks for the spawn method
   	if (process.platform == 'win32' && options.path.indexOf(' ') >= 0) {
+		var xulRunnerPath = path.join(options.path, '../xulrunner/xulrunner.exe');
+		process.env['SLIMERJSLAUNCHER'] = xulRunnerPath;
+		var fakePath = '"' + options.path + '"';
+		var fakeArg = '"bridge.js"'
   		var args = [
   			'/S',
   			'/C',
   			'"',
-  			options.path,
-  			'bridge.js',
+  			fakePath,
+  			fakeArg,
   			'"'
   		];
   
@@ -154,6 +158,7 @@ exports.create = function (options, callback) {
   			command,
   			args,
   			{
+				stdio: "inherit",
   				windowsVerbatimArguments: true,
   				cwd: __dirname
   			}
